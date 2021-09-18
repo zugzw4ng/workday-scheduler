@@ -107,22 +107,22 @@ dayInfo.forEach(function (thisHour) {
 
     var hourPlan = $("<div>")
         .attr({
-            "class": "col-9 p-0"
+            "class": "col-9 description p-0"
         });
     var planData = $("<textarea>");
     hourPlan.append(planData);
     planData.attr("id", thisHour.id);
     if (thisHour.time < moment().format("HH")) {
         planData.attr({
-            "class": "past col-9 ",
+            "class": "past col-9 mw-100",
         })
     } else if (thisHour.time === moment().format("HH")) {
         planData.attr({
-            "class": "present col-9"
+            "class": "present col-9 mw-100"
         })
     } else if (thisHour.time > moment().format("HH")) {
         planData.attr({
-            "class": "future col-9"
+            "class": "future col-9 mw-100"
         })
     }
 
